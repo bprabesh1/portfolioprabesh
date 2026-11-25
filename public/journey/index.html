@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Journey | Prabesh Bhusal</title>
+<meta name="description" content="Prabesh Bhusal's journey from school to software developer and network administrator, climbed one checkpoint at a time.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/img/mountain.webp" as="image" type="image/webp">
+<link rel="preload" href="/api/site" as="fetch" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/journey.css">
+<script src="/js/theme.js"></script>
+<script src="/js/core.js" defer></script>
+<script src="/js/journey.js" defer></script>
+</head>
+<body class="jpage">
+<header class="top">
+  <a class="brand" href="/" aria-label="Prabesh Bhusal, home">PB</a>
+  <nav id="nav" class="nav" aria-label="Main">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/journey/" class="on" aria-current="page">Journey</a>
+    <a href="/#education">Education</a>
+    <a href="/#training">Training</a>
+    <a href="/#certificates">Certificates</a>
+    <a href="/#experience">Experience</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#skills">Skills</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+  <div class="theme" role="group" aria-label="Colour theme">
+    <button type="button" data-theme-set="light" aria-pressed="true">Light</button>
+    <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
+  </div>
+  <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+</header>
+<main class="journey">
+  <div class="jhead">
+    <h1 id="j-title">The Journey</h1>
+    <p id="j-tag">One climb, six checkpoints, still going up.</p>
+  </div>
+  <section class="stage" id="stage" aria-label="Animated climb">
+    <div class="world" id="world">
+      <span class="sun"></span>
+      <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+      <img class="mountain" src="/assets/img/mountain.webp" width="1200" height="757" alt="" decoding="async">
+      <svg class="route" id="route" viewBox="0 0 1200 967" aria-hidden="true"></svg>
+      <div id="flags"></div>
+      <img class="boy" id="boy" src="/assets/img/climber.png" width="209" height="595" alt="Cartoon climber" decoding="async">
+    </div>
+    <div class="hint" id="hint" role="status" aria-live="polite"></div>
+    <article class="detail" id="detail" hidden aria-live="polite"></article>
+    <div class="finale" id="finale" hidden>
+      <h2 id="fin-title">The journey never ends.</h2>
+      <p id="fin-text"></p>
+      <p class="actions">
+        <a class="btn solid" id="fin-resume" href="#" target="_blank" rel="noopener" hidden data-track="cta:resume">View my resume</a>
+        <a class="btn line" href="/#projects" data-track="cta:projects">Explore my projects</a>
+        <a class="btn line" href="/#contact" data-track="cta:contact">Contact me</a>
+        <button type="button" class="btn line" id="replay">Climb again</button>
+      </p>
+    </div>
+  </section>
+  <div class="controls" role="group" aria-label="Journey controls">
+    <button type="button" class="btn line" id="back">Back</button>
+    <button type="button" class="btn line" id="play" aria-pressed="false">Pause</button>
+    <button type="button" class="btn line" id="next">Next checkpoint</button>
+    <button type="button" class="btn solid" id="view">View details</button>
+    <button type="button" class="btn line" id="skip">Skip to summit</button>
+    <div class="bar" aria-hidden="true"><span id="bar-fill"></span></div>
+  </div>
+</main>
+</body>
+</html>

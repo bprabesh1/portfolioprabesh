@@ -1,0 +1,10 @@
+{
+  "name": "prabesh-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sql": "node scripts/build-sql.mjs",
+    "reset-password": "node scripts/reset-password-sql.mjs",
+    "deploy": "wrangler deploy"
+  }
+}

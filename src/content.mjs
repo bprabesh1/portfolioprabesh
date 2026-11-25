@@ -1,0 +1,75 @@
+// Site settings (editable in the admin panel) with their defaults, plus the first-run seed data.
+
+// key: [group, label, default, max length, multiline]
+export const SETTINGS = {
+  hero_first: ['Hero', 'First name (left)', 'PRABESH', 30],
+  hero_last: ['Hero', 'Last name (right)', 'BHUSAL', 30],
+  hero_role: ['Hero', 'Role line', 'Software Developer | Network Administrator', 100],
+  hero_tagline: ['Hero', 'Hero tagline', 'Building dependable software and keeping networks running.', 160],
+  hero_image: ['Hero', 'Hero photo (leave empty for the built-in photo)', '', 32, 'image'],
+  resume_file: ['Hero', 'Resume (PDF)', '', 32, 'pdf'],
+  site_title: ['Site', 'Browser tab title', 'Prabesh Bhusal | Software Developer & Network Administrator', 120],
+  site_description: ['Site', 'Search description', 'Portfolio of Prabesh Bhusal, software developer and network administrator from Bhairahawa, Nepal.', 200],
+  footer_text: ['Site', 'Footer text', 'Designed and built by Prabesh Bhusal.', 120],
+  about_title: ['About', 'Heading', 'About Me', 60],
+  about_tagline: ['About', 'Tagline', 'Technology should be practical, reliable and accessible.', 160],
+  about_text: ['About', 'Biography (blank line = new paragraph)', 'I am an IT graduate with a Bachelor of Information Management (BIM) degree and practical experience in software development, database systems, networking and technical support.\n\nAt Care Computer Sewa I worked as a Software Developer and Network Administrator, contributing to application development, database design, network administration and troubleshooting.\n\nI believe technology should be practical, reliable and accessible.', 3000, 'text'],
+  about_location: ['About', 'Location', 'Bhairahawa, Nepal', 80],
+  about_points: ['About', 'Highlights (one per line)', 'Software development and clean code\nDatabase design and management\nNetwork administration and troubleshooting\nContinuous learning', 600, 'text'],
+  education_title: ['Education', 'Heading', 'Education', 60],
+  education_tagline: ['Education', 'Tagline', 'Where the foundation was laid, year by year.', 160],
+  training_title: ['Training', 'Heading', 'Training', 60],
+  training_tagline: ['Training', 'Tagline', 'Focused courses that added practical skills.', 160],
+  certificates_title: ['Certificates', 'Heading', 'Certificates', 60],
+  certificates_tagline: ['Certificates', 'Tagline', 'Proof of the work put in.', 160],
+  experience_title: ['Experience', 'Heading', 'Experience', 60],
+  experience_tagline: ['Experience', 'Tagline', 'Hands-on work with software and networks.', 160],
+  projects_title: ['Projects', 'Heading', 'Projects', 60],
+  projects_tagline: ['Projects', 'Tagline', 'Things I have designed, built and tested.', 160],
+  skills_title: ['Skills', 'Heading', 'Technical Skills', 60],
+  skills_tagline: ['Skills', 'Tagline', 'The toolbox I reach for every day.', 160],
+  contact_title: ['Contact', 'Heading', "Let's Connect", 60],
+  contact_tagline: ['Contact', 'Tagline', 'Have an idea or a problem to solve? Write to me.', 160],
+  contact_email: ['Contact', 'Email', '', 120],
+  contact_phone: ['Contact', 'Phone', '', 30],
+  contact_github: ['Contact', 'GitHub link', '', 200],
+  contact_linkedin: ['Contact', 'LinkedIn link', '', 200],
+  contact_website: ['Contact', 'Website link', '', 200],
+  journey_title: ['Journey', 'Page heading', 'The Journey', 60],
+  journey_tagline: ['Journey', 'Page tagline', 'One climb, six checkpoints, still going up.', 160],
+  journey_end_title: ['Journey', 'Finale heading', 'The journey never ends.', 80],
+  journey_end_text: ['Journey', 'Finale tagline', 'Every step, every challenge and every achievement has brought me closer to my goals.', 240],
+};
+
+export const IMAGE_KEYS = Object.entries(SETTINGS).filter(([, d]) => d[4] === 'image' || d[4] === 'pdf').map(([k]) => k);
+
+// First-run content: only facts supplied by Prabesh.
+export const SEED = {
+  milestones: [
+    ['education', 'Secondary Education Examination (SEE)', 'Montessori Memorial English Boarding High School, Bhairahawa', '2019', '2019',
+      'Foundational secondary school education with distinction in computer science and mathematics, sparking early passion for computing.', ['Basic Computing', 'Logic & Math', 'Scientific Inquiry']],
+    ['education', 'Intermediate (10+2)', 'New Horizon College, Butwal', '2019 – 2021', '2019',
+      'Higher secondary education completed at New Horizon College, Butwal.', []],
+    ['education', 'Bachelor of Information Management (BIM)', 'Tribhuvan University, Nepal', '2021 – 2026', '2021',
+      'Comprehensive undergraduate degree synthesizing information technology and managerial science: software engineering, database systems, networking, enterprise systems, and business intelligence.', ['Software Engineering', 'Enterprise Databases', 'System Analysis', 'Network Protocols']],
+    ['training', 'Accounting Software Training', 'Siddharthanagar Municipality', '2023', '2023',
+      'Specialized municipal training in enterprise accounting software, digital ledger systems, fiscal record management, and automated receipt processing.', ['Accounting Software', 'Financial Records', 'Municipal Workflows']],
+    ['training', 'Advanced Diploma in Computer Application (ADCA)', 'Training & Certification Institute', 'March 2024 – March 2025', '2024-03',
+      'Intensive 1-year professional diploma covering full-stack web applications, advanced relational database modeling, systems troubleshooting, and practical software design.', ['PHP', 'MySQL', 'Full-Stack Web', 'Troubleshooting']],
+    ['experience', 'Software Developer & Network Administrator', 'Care Computer Sewa, Butwal-6', 'September 2025 – October 2026', '2025-09',
+      'Engineered web applications and internal tools, designed and normalized MySQL schemas, administered enterprise LAN/WLAN infrastructure, and provided comprehensive technical troubleshooting and printer/device support.', ['Network Admin', 'MySQL Architecture', 'Full-Stack Apps', 'Infrastructure Support']],
+  ],
+  projects: [
+    ['E-Learning Management System',
+      'Full-stack e-learning platform with separate admin and student dashboards, protected video lessons, payment-based approval and session-limit access control. Designed the MySQL schema and tested and debugged all features.',
+      ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL']],
+  ],
+  skills: {
+    'Programming': ['Python', 'PHP', 'JavaScript', 'Java', 'C'],
+    'Web Development': ['HTML', 'CSS', 'Bootstrap', 'React', 'Node.js', 'Responsive Web Design'],
+    'Databases': ['MySQL', 'MongoDB', 'SQL Queries', 'Database Design', 'Database Management', 'CRUD Operations', 'Database Integration'],
+    'Software Engineering': ['RESTful API Development', 'API Integration', 'Software Testing', 'Debugging', 'Application Development and Maintenance'],
+    'Networking & Systems': ['Network Device Configuration', 'Network Monitoring', 'LAN/WLAN Administration', 'Hardware & Software Troubleshooting', 'Printer Configuration', 'Technical Support'],
+    'Tools': ['Git', 'GitHub', 'VS Code', 'XAMPP', 'phpMyAdmin', 'Microsoft Power BI'],
+  },
+};
