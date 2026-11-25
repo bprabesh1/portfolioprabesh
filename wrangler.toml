@@ -11,5 +11,5 @@ not_found_handling = "404-page"
 [[d1_databases]]
 binding = "DB"
 database_name = "portfolio"
-# Paste the id of YOUR existing D1 database here (Cloudflare dashboard > D1).
-database_id = "PASTE-YOUR-D1-DATABASE-ID"
+
+database_id = "a283eb42-c990-4136-bac5-f4fd4d8d692c"
